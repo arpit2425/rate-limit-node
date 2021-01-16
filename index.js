@@ -8,4 +8,5 @@ const limit=rateLimiter({
 app.get('/',limit,(req,res)=>{
   res.send('hi');
 });
-app.listen(4010);
+const PORT=process.env.PORT || 4010;
+app.listen(PORT);
